@@ -623,7 +623,7 @@ header nav ul li a {
   font-weight: 300;
   color: #0b3245;
   white-space: nowrap;
-  opacity: 0;
+  opacity: 0.8;
   user-select: none;
 }
 .emailbtn {
@@ -632,7 +632,7 @@ header nav ul li a {
   height: 70px;
   background: #0b3245;
   margin-top: 80px;
-  opacity: 0;
+  opacity: 0.8;
 }
 
 .numberbtn {
@@ -642,7 +642,7 @@ header nav ul li a {
   border: 1px solid #0b3245;
   margin-top: 25px;
   margin-bottom: 80px;
-  opacity: 0;
+  opacity: 0.8;
 }
 
 .emailtext {
@@ -675,7 +675,7 @@ header nav ul li a {
   padding: 120px;
   font-size: 22px;
   user-select: none;
-  opacity: 0;
+  opacity: 0.8;
   display: none;
 }
 

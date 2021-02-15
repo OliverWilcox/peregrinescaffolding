@@ -9,7 +9,7 @@
     </h1>
     <div class="abouttrigger"></div>
     <div class="aboutline" ref="abtline"></div>
-    <div class="reviewcontainer" v-bind:class="{ open }">
+    <div class="reviewcontainer" v-bind:class="{ openreview }">
       <div class="reviewblock" ref="reviews">
         <h3 class="name1">Sean Lee Falcon</h3>
         <h1 class="review1">
@@ -36,7 +36,7 @@
         </h1>
       </div>
     </div>
-    <div class="slidercount" v-bind:class="{ open }">
+    <div class="slidercount" v-bind:class="{ openreview }">
       <div
         class="arrowright1"
         v-on:click="slide2On"
@@ -97,14 +97,14 @@
     </div>
     <div
       class="gallerybtn"
-      v-bind:class="{ open }"
-      v-on:click="open = !open"
+      v-bind:class="{ openreview }"
+      v-on:click="openreview = !openreview"
       ref="galbtn"
     >
-      <div class="border1gal" v-bind:class="{ open }"></div>
-      <div class="border2gal" v-bind:class="{ open }"></div>
-      <h3 class="galtext" v-bind:class="{ open }">Testimonials</h3>
-      <h3 class="goback" v-bind:class="{ open }">Go Back</h3>
+      <div class="border1gal" v-bind:class="{ openreview }"></div>
+      <div class="border2gal" v-bind:class="{ openreview }"></div>
+      <h3 class="galtext" v-bind:class="{ openreview }">Testimonials</h3>
+      <h3 class="goback" v-bind:class="{ openreview }">Go Back</h3>
     </div>
   </div>
 </template>
@@ -126,7 +126,7 @@ export default {
     isSlider3On: false,
   }),
   inheritAttrs: true,
-  props: ["open"],
+  props: ["openreview"],
   methods: {
     slide1On() {
       let reviews = this.$refs.reviews;
@@ -223,30 +223,30 @@ export default {
   display: none;
 }
 
-.reviewcontainer.open {
+.reviewcontainer.openreview{
   margin-top: 100px;
 }
 .galswitchon {
   z-index: +2;
   display: block;
 }
-.galtext.open {
+.galtext.openreview {
   opacity: 0;
 }
-.goback.open {
+.goback.openreview {
   opacity: 1;
 }
-.reviewcontainer.open {
+.reviewcontainer.openreview {
   transition: 0.5s;
   margin-top: 100px;
   display: block;
   opacity: 1;
   z-index: +1;
 }
-.slidercount.open {
+.slidercount.openreview {
   display: block;
 }
-.border1gal.open {
+.border1gal.openreview {
   margin-left: 5px;
 }
 .count2on {

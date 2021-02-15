@@ -4,7 +4,7 @@
     <div
       class="burger"
       v-on:click="
-        (burgerOn = !burgerOn), overflowOff(), burgerOff(), (openburg = true)
+        (burgerOn = !burgerOn), overflowOff(), burgerOff(), (openburg = true), (openreview = false)
       "
       v-bind:class="{ burgerOn }"
     >
@@ -23,7 +23,7 @@
       <h2
         class="reviews2"
         v-bind:class="{ burgerOn }"
-        v-on:click="scrollIntoViewReviews(), tagsOff(), (open = true)"
+        v-on:click="scrollIntoViewReviews(), tagsOff()"
       >
         Testimonials.
       </h2>
@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <section2 v-bind:open="open"></section2>
+    <section2 v-bind:openreview="openreview"></section2>
     <h1 class="contactus" ref="contact">Contact Us</h1>
     <div class="emailbtn" v-on:click="Email()">
       <h3 class="emailtext" v-bind:href="email">Email</h3>
@@ -79,7 +79,7 @@ export default {
       isPhoneOn: false,
       burgerOn: false,
       openburg: false,
-     
+      openreview: false,
     };
   },
 

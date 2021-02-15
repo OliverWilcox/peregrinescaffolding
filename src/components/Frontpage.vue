@@ -45,7 +45,7 @@ export default {
       window.scrollTo(0, 0);
     },
     scrollIntoViewAbout() {
-      window.scrollTo(0, 820);
+      window.scrollTo(0, 750);
     },
     scrollIntoViewContact() {
       window.scrollTo(0, 5000);

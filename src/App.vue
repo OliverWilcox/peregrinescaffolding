@@ -4,7 +4,7 @@
     <div
       class="burger"
       v-on:click="
-        (burgerOn = !burgerOn), overflowOff(), burgerOff(), (open = true)
+        (burgerOn = !burgerOn), overflowOff(), burgerOff(), (openburg = true)
       "
       v-bind:class="{ burgerOn }"
     >
@@ -23,7 +23,7 @@
       <h2
         class="reviews2"
         v-bind:class="{ burgerOn }"
-        v-on:click="scrollIntoViewReviews(), tagsOff()"
+        v-on:click="scrollIntoViewReviews(), tagsOff(), (open = true)"
       >
         Testimonials.
       </h2>
@@ -66,6 +66,8 @@ gsap.registerPlugin(TweenMax);
 gsap.registerPlugin(TweenLite);
 import FrontPage from "../src/components/Frontpage";
 import Section2 from "./components/Section2.vue";
+
+
 export default {
   name: "App",
   components: {
@@ -76,18 +78,19 @@ export default {
     return {
       isPhoneOn: false,
       burgerOn: false,
-      open: false,
+      openburg: false,
+     
     };
   },
 
   methods: {
     scrollIntoViewAbout() {
-      window.scrollTo(0, 800);
+      window.scrollTo(0, 700);
     },
     scrollIntoViewReviews() {
       window.scrollTo(0, 1000);
-      this.open = true;
-      if (this.open == true) {
+      this.openreview = true;
+      if (this.openreview == true) {
         window.scrollTo(0, 1100);
       }
     },

@@ -112,6 +112,9 @@
 import { gsap, TweenMax, TweenLite } from "gsap";
 import Draggable from "gsap/Draggable";
 import ScrollTrigger from "gsap/ScrollTrigger";
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(Draggable);
 gsap.registerPlugin(TweenMax);
